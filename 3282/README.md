@@ -1,8 +1,13 @@
 # 3282. 0/1 Knapsack
 [링크](https://www.swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWBJAVpqrzQDFAWr&categoryId=AWBJAVpqrzQDFAWr&categoryType=CODE)
 <hr />
-DP에 관한 가장 기본적인 문제
-만약 Dynamic Programming을 모르면 먼저 공부부터 하자
+DP에 관한 가장 기본적인 문제<br />
+(Dynamic Programming을 모르면 먼저 공부부터 하자)<br />
+
+해당 문제는 완전탐색으로도 해결할 수 있지만 문제는 시간이 너무 오래 걸린다.<br />
+완전탐색은 모든 부분집합을 구하는 경우와 같으므로<br />
+만약 item이 n개이면 O(2의n승)이다.<br/>
+하지만 이 문제를 DP로 접근하면 O(N * W:(고려해야할 무게))이다.
 <br />
 
 <pre><code>

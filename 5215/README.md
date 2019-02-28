@@ -16,8 +16,7 @@ a, b, c<br/>
 <pre><code>
 public class Solution {
 	public static void main(String[] args) throws IOException {
-//		BufferedReader br 	= new BufferedReader(new InputStreamReader(System.in));
-		BufferedReader br = new BufferedReader(new FileReader(new File("input.txt")));
+		BufferedReader br 	= new BufferedReader(new InputStreamReader(System.in));
 
 		int T = Integer.valueOf(br.readLine());
 
@@ -43,8 +42,7 @@ public class Solution {
 			for (int i = 0; i < N; ++i) {
 				int curSize = sizeOfCombi;
 				for (int j = 0; j < curSize; ++j) {
-					//만약 칼로리가 MAX를 넘을 경우, 해당 조합을 고려하지 않음
-					//만약 a, b 조합이 칼로리가 1000일 경우 여기에 c를 더해봐야 1000 + 알파
+					//만약 칼로리가 MAX를 넘을 경우 고려하지 않음
 					if (combi[j][1] + hamburger[i][1] <= MAX_CALORIE) {
 						combi[sizeOfCombi][0] += combi[j][0] + hamburger[i][0];
 						combi[sizeOfCombi++][1] += combi[j][1] + hamburger[i][1];
@@ -54,16 +52,14 @@ public class Solution {
 				combi[sizeOfCombi++][1] = hamburger[i][1];
 			}
 			
-			//점수를 기준으로 내림차순 정렬
-			Arrays.sort(combi, new Comparator<int[]>() {
-				@Override
-				public int compare(int[] o1, int[] o2) {
-					// TODO Auto-generated method stub
-					return o2[0] - o1[0];
+			int max = 1;
+			for (int i = 0; i < sizeOfCombi; ++i) {
+				if (max < combi[i][0]) {
+					max = combi[i][0];
 				}
-			});
+			}
 
-			System.out.println("#" + test_case + " " + combi[0][0] );
+			System.out.println("#" + test_case + " " + max);
 		}
 		
 		br.close();

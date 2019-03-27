@@ -1,5 +1,5 @@
-# 5215. 햄버거 다이어트
-[링크](https://www.swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWWxqfhKAWgDFAW4)
+# 5550. 나는 개구리로소이다
+[링크](https://www.swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWWxqfhKAWgDFAW4&)
 <hr />
 croak 혹은 croakcroak가 울음 한 번의 완성이고, crocroakak이면 2마리의 개구리가 존재한다.<br/>
 무슨 차이냐 하면 c의 발생위치가 croak한 묶음이 끝난 후인지 전에 우는지 판단하면 된다.<br/>
